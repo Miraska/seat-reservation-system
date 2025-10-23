@@ -1,0 +1,184 @@
+type: collection.insomnia.rest/5.0
+name: Test
+meta:
+  id: wrk_1474faff81144f139b3413e0821817ba
+  created: 1761242616859
+  modified: 1761242616859
+  description: ""
+collection:
+  - url: http://localhost:3000/api/bookings/reserve
+    name: Бронирование места на мероприятие
+    meta:
+      id: req_c7c81d9086c74efca2d17746c0ad7fdd
+      created: 1761242677453
+      modified: 1761242751358
+      isPrivate: false
+      description: ""
+      sortKey: -1761242677453
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "event_id": 1,
+          "user_id": "user123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/bookings/user/user123
+    name: Все бронирования конкретного пользователя
+    meta:
+      id: req_90f1091763bf4364a375d88b2f439cec
+      created: 1761242796995
+      modified: 1761243024373
+      isPrivate: false
+      description: ""
+      sortKey: -1761242796995
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/bookings/event/:eventId
+    name: Все бронирования конкретного события
+    meta:
+      id: req_935b1157d6fd428a98d1fb11a0d465de
+      created: 1761242851735
+      modified: 1761242858771
+      isPrivate: false
+      description: ""
+      sortKey: -1761242737224
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: eventId
+        value: ""
+  - url: http://localhost:3000/api/events
+    name: Список всех мероприятий
+    meta:
+      id: req_4140e965272a46beaf4d36512b74c120
+      created: 1761242875131
+      modified: 1761242887419
+      isPrivate: false
+      description: ""
+      sortKey: -1761242707338.5
+    method: GET
+    body:
+      mimeType: multipart/form-data
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/api/events/:id
+    name: Детальная информация о событии с количеством доступных мест
+    meta:
+      id: req_eef2f43fe7a744a8a0dcb7f53065d5c0
+      created: 1761242907989
+      modified: 1761242915681
+      isPrivate: false
+      description: ""
+      sortKey: -1761242692395.75
+    method: GET
+    body:
+      mimeType: multipart/form-data
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+    pathParameters:
+      - name: id
+        value: ""
+  - url: http://localhost:3000/health
+    name: Проверка состояния сервиса
+    meta:
+      id: req_af499175d84b4180910755f15f8fea0a
+      created: 1761242934881
+      modified: 1761242942206
+      isPrivate: false
+      description: ""
+      sortKey: -1761242684924.375
+    method: GET
+    body:
+      mimeType: multipart/form-data
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+      - name: User-Agent
+        value: insomnia/11.6.2
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_f8741de481be853c6f68cdbd487373d059d2474d
+    created: 1761242616862
+    modified: 1761242616862
+environments:
+  name: Base Environment
+  meta:
+    id: env_f8741de481be853c6f68cdbd487373d059d2474d
+    created: 1761242616861
+    modified: 1761242616861
+    isPrivate: false
